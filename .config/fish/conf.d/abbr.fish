@@ -1,0 +1,6 @@
+abbr rm "rm -i"
+abbr cp "cp -i"
+abbr mv "mv -i"
+abbr mkdir "mkdir -p"
+abbr fishrc "code $HOME/.config/fish"
+abbr hyprconfig "code $HOME/.config/hypr"

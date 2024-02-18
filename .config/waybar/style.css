@@ -1,0 +1,69 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #cdd6f4;
+}
+
+tooltip {
+  background: #1e1e2e;
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+/*All icons have this style*/
+#custom-arch_btn,
+#cpu,
+#disk,
+#memory,
+#clock,
+#custom-updates,
+#pulseaudio {
+  background: rgba(42, 42, 42, 0.4);
+  opacity: 0.8;
+  padding: 0px 10px;
+  margin: 3px 0px;
+  margin-top: 10px;
+  border: 0px;
+}
+
+/*Left-rounded icons have this style*/
+#custom-arch_btn,
+#pulseaudio {
+  border-radius: 10px 0px 0px 10px;
+}
+
+/*Right-rounded icons have this style*/
+#cpu,
+#clock {
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 10px;
+}
+
+/*Left-most icon has this style*/
+#custom-arch_btn {
+  color: #89b4fa;
+  margin-left: 10px;
+  border-right: 0px;
+}
+
+/*Right-most icon has this style*/
+#clock {
+  margin-right: 10px;
+  border-right: 0px;
+}

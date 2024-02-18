@@ -106,3 +106,6 @@ export LANG=en_US.UTF-8
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(starship init zsh)"
+

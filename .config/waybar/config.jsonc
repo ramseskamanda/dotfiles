@@ -1,0 +1,59 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 50,
+    "modules-left": ["custom/arch_btn","custom/updates","cpu"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "clock"],
+    "include": [],
+
+    "custom/arch_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/update-sys",
+        "on-click": "~/.config/waybar/scripts/update-sys update",
+        "interval": 300,
+        "tooltip": true
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10,
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{: %A, %B %e %Y}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "on-click": "~/.config/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/waybar/scripts/volume --inc",
+        "on-scroll-down": "~/.config/waybar/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    }
+}
